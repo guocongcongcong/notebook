@@ -1,19 +1,54 @@
 # notebook
 每日笔记本
 
-##关于这个小教本
+<!-- TOC -->
+
+- [notebook](#notebook)
+    - [关于这个小教本](#%E5%85%B3%E4%BA%8E%E8%BF%99%E4%B8%AA%E5%B0%8F%E6%95%99%E6%9C%AC)
+    - [作用](#%E4%BD%9C%E7%94%A8)
+    - [演示](#%E6%BC%94%E7%A4%BA)
+    - [关于template的问题](#%E5%85%B3%E4%BA%8Etemplate%E7%9A%84%E9%97%AE%E9%A2%98)
+    - [后续补充](#%E5%90%8E%E7%BB%AD%E8%A1%A5%E5%85%85)
+        - [运行Powershell脚本](#%E8%BF%90%E8%A1%8Cpowershell%E8%84%9A%E6%9C%AC)
+        - [执行策略限制](#%E6%89%A7%E8%A1%8C%E7%AD%96%E7%95%A5%E9%99%90%E5%88%B6)
+
+<!-- /TOC -->
+## 关于这个小教本
 使用的powershell的脚本，如果你使用的是windows的话，那么你就可以使用该脚本来创建一个笔记本。
 
 我使用的是文本编辑器是VSCode，加载了两个插件，Markdown Preview Enhanced 和 Markdown TOC 
 
-关于以上两个插件的加载你可以访问我的博客看看。
+关于以上两个插件的加载你可以访问我的[博客]看看。
 
-##作用
-当日的笔记
+## 作用
+创建一个当日的笔记
 
-##后续补充
+## 演示
 
-###运行Powershell脚本
+- 运行
+![运行](./pic/1.png)
+
+- 首次运行：最后会有个链接，按住ctrl单击可以访问创建好的文件
+![首次运行](./pic/2.png)
+
+- 文件展示
+![文件展示](./pic/3.png)
+
+
+## 关于template的问题
+
+这个文件是一个模板，里面一共有四行，开头空两行是用来加载标题的，第一个二级目录是 "目录"，下面一个块补充区域，
+
+```md
+<!-- TOC -->
+
+<!-- /TOC -->
+```
+在该区域会出现一个目录，如果你加载了VScode的 Markdown TOC的话，它会自动给你更新一个目录的。
+
+## 后续补充
+
+### 运行Powershell脚本
 
 当您的脚本编写成功后您可能第一次会像下面的方式运行它，也就是只输入脚本的文件名，会报错。
 
@@ -46,7 +81,7 @@ files count
 20
 ```
 
-###执行策略限制
+### 执行策略限制
 Powershell一般初始化情况下都会禁止脚本执行。脚本能否执行取决于Powershell的执行策略。
 ```cmd
 PS E:> .\MyScript.ps1
@@ -92,4 +127,4 @@ RemoteSigned：本地脚本无限制，但是对来自网络的脚本必须经�
 ```
 
 ---
-[主页]:https://blog.csdn.net/double_debug/article/details/84636703
+[博客]:https://blog.csdn.net/double_debug/article/details/84636703
